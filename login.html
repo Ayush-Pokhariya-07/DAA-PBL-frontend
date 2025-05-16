@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TrackMate | Login</title>
+        <link rel="stylesheet" href="style.css" />
+        <script defer src="auth-script.js"></script>
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="navbar-left">
+                <h1>TrackMate</h1>
+            </div>
+            <nav class="navbar-right">
+                <button id="theme-toggle">🌓</button>
+            </nav>
+        </header>
+
+        <section class="auth-section">
+            <div class="auth-container">
+                <h2>Login to TrackMate</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input
+                            type="email"
+                            id="login-email"
+                            name="email"
+                            required
+                            placeholder="Enter your email"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input
+                            type="password"
+                            id="login-password"
+                            name="password"
+                            required
+                            placeholder="Enter your password"
+                        />
+                    </div>
+                    <button type="submit" class="auth-btn">Login</button>
+                </form>
+                <p class="auth-text">
+                    Don't have an account? <a href="signup.html">Sign Up</a>
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 TrackMate | Made with ❤️ for DAA PBL</p>
+        </footer>
+    </body>
+</html>

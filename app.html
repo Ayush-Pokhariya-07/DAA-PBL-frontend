@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TrackMate | Route Planner</title>
+        <!-- Leaflet CSS -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet/dist/leaflet.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="app-style.css" />
+        <script defer src="app-script.js"></script>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <header class="navbar">
+            <div class="navbar-left">
+                <h1>TrackMate</h1>
+            </div>
+            <nav class="navbar-right">
+                <button id="theme-toggle">🌓</button>
+            </nav>
+        </header>
+
+        <!-- Main Content Section -->
+        <section class="main-content">
+            <!-- Left Panel: Form & Results -->
+            <div class="left-panel">
+                <h2>Plan Your Route</h2>
+                <form id="route-form">
+                    <div class="form-group">
+                        <label for="source">Source</label>
+                        <input
+                            type="text"
+                            id="source"
+                            name="source"
+                            required
+                            placeholder="Enter starting location"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input
+                            type="text"
+                            id="destination"
+                            name="destination"
+                            required
+                            placeholder="Enter destination"
+                        />
+                    </div>
+                    <button type="submit" class="cta-btn">
+                        Get Route Info
+                    </button>
+                </form>
+
+                <!-- Route Details -->
+                <div id="route-result" class="result-box hidden">
+                    <h3>Route Details</h3>
+                    <p>
+                        <strong>Distance:</strong> <span id="distance">--</span>
+                    </p>
+                    <p>
+                        <strong>Estimated Time:</strong>
+                        <span id="time">--</span>
+                    </p>
+                </div>
+
+                <!-- Accident Hotspots List -->
+                <div id="hotspot-list" class="result-box hidden">
+                    <h3>Accident Hotspots</h3>
+                    <ul id="hotspots"></ul>
+                </div>
+            </div>
+
+            <!-- Right Panel: Map -->
+            <div class="right-panel">
+                <h2>Route Map</h2>
+                <div id="map"></div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 TrackMate | Made with ❤️ for DAA PBL</p>
+        </footer>
+
+        <!-- Leaflet JS -->
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    </body>
+</html>
