@@ -37,36 +37,54 @@ header.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--header-bg);
+    background-color: rgba(32, 32, 32, 0.862);
     padding: 1rem 2rem;
     box-shadow: 0 2px 4px var(--shadow);
 }
 
-.navbar-left h1 {
+.navbar-left span {
     font-size: 1.8rem;
+    font-weight: bold;
 }
-
+.logo-accent {
+    color: rgb(56, 87, 226);
+}
 .navbar-right {
     display: flex;
     align-items: center;
 }
 
-.nav-btn,
+.nav-btn {
+    background: none;
+    background-color: rgb(96, 153, 219);
+    /* background-color: rgb(211, 217, 224); */
+    padding: 6px;
+    border-radius: 7px;
+    border: none;
+    font-size: large;
+    cursor: pointer;
+    margin-left: 1rem;
+    color: white;
+}
+.nav-btn:hover {
+    background-color: rgb(96, 153, 219);
+    box-shadow: 0px 0px 5px #ccc;
+}
 #theme-toggle {
     background: none;
     border: none;
-    font-size: 1rem;
+    font-size: 1.7rem;
     cursor: pointer;
     margin-left: 1rem;
 }
-
 /* Hero Section */
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 3rem 2rem;
-    background: var(--accent-color);
+    /* background: var(--accent-color); */
+    background: linear-gradient(235deg, #90caf9, #5da2db);
     color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px var(--shadow);
@@ -95,11 +113,12 @@ header.navbar {
     font-size: 1.1rem;
     padding: 0.8rem 1.5rem;
     background: #fff;
-    color: var(--accent-color);
+    /* color: var(--accent-color); */
+    color: #5da2db;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.1s ease;
 }
 
 .hero-buttons .cta-btn:hover {
@@ -133,7 +152,11 @@ section.how-it-works {
     box-shadow: 0 4px 8px var(--shadow);
 }
 
-.section-img,
+.section-img {
+    flex: 1;
+    min-width: 300px;
+    padding: 1rem;
+}
 .section-text {
     flex: 1;
     min-width: 300px;
@@ -141,7 +164,8 @@ section.how-it-works {
 }
 
 .section-img img {
-    max-width: 100%;
+    /* max-width: 75%; */
+    max-width: 50%;
     border-radius: 8px;
     box-shadow: 0 4px 8px var(--shadow);
 }
@@ -233,6 +257,7 @@ section.how-it-works .section-text h3 {
 .team-members {
     display: flex;
     justify-content: space-around;
+    /* align-items: center; */
     flex-wrap: wrap;
     margin-top: 1.5rem;
 }

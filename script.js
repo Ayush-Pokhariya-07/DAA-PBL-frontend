@@ -1,8 +1,8 @@
-// Auto Theme Toggle Functionality
+//theme toggle
 const body = document.body;
 const themeToggle = document.getElementById("theme-toggle");
 
-// Function to apply the chosen theme
+// to apply the chosen theme
 function applyTheme(theme) {
     if (theme === "dark") {
         body.classList.add("dark");
@@ -11,19 +11,20 @@ function applyTheme(theme) {
     }
 }
 
-// Retrieve saved theme from localStorage
+// apply the theme saved in the local storage
 let storedTheme = localStorage.getItem("theme");
 if (storedTheme) {
     applyTheme(storedTheme);
-} else {
-    // Use system preference if no theme saved
+}
+// use default theme of the system
+else {
     const prefersDark = window.matchMedia(
         "(prefers-color-scheme: dark)"
     ).matches;
     applyTheme(prefersDark ? "dark" : "light");
 }
 
-// Toggle theme on button click
+// theme toggle button functionality
 themeToggle.addEventListener("click", () => {
     if (body.classList.contains("dark")) {
         body.classList.remove("dark");
@@ -34,11 +35,14 @@ themeToggle.addEventListener("click", () => {
     }
 });
 
-// Navigation button functionality
+// navigation button
 document.getElementById("login-btn").addEventListener("click", () => {
     window.location.href = "login.html";
 });
+document.getElementById("signup-btn").addEventListener("click", () => {
+    window.location.href = "signup.html";
+});
 
 document.getElementById("get-started").addEventListener("click", () => {
-    window.location.href = "app.html"; // or the appropriate URL
+    window.location.href = "app.html";
 });
